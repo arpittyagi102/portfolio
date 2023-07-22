@@ -23,20 +23,20 @@ export default function Welcome(){
       (
       !remove
       ? <div>
-              {svgPath ? (
-              <svg xmlns='http://www.w3.org/2000/svg' width='883' height='102'>
-                <motion.path
-                  d={welcomeSvgPath}
-                  fill='transparent'
-                  strokeWidth='1'
-                  stroke='rgba(255, 255, 255, 0.69)'
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{
-                    duration: 7,
-                    ease: 'easeInOut',
-                  }}
-                />
+            {svgPath ? (
+            <svg xmlns='http://www.w3.org/2000/svg' width='883' height='102'>
+              <motion.path
+                d={welcomeSvgPath}
+                fill='transparent'
+                strokeWidth='1'
+                stroke='rgba(255, 255, 255, 0.69)'
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{
+                  duration: 7,
+                  ease: 'easeInOut',
+                }}
+              />
               </svg>
             ) : (
               <motion.svg xmlns='http://www.w3.org/2000/svg' width='660' height='102'>
