@@ -49,7 +49,7 @@ export default function Home(){
                     <div className="text-2xl">
                     <br/>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
                     </div>
-                    <div className="px-5 py-3 m-5 bg-white rounded-lg w-max text-black text-lg">
+                    <div className="px-5 py-3 m-5 bg-white rounded-lg w-max text-black text-lg font-bold">
                         Resume
                     </div>
                 </div>
