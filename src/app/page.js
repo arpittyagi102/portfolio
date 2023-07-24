@@ -2,7 +2,7 @@
 
 //import Welcome from "./components/Welcome";
 //import Home from "./components/Home"
-import About from "./components/About"
+import About from "./components/About";
 import { motion,useScroll,useTransform } from "framer-motion";
 
 export default function App() {
