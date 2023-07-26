@@ -19,10 +19,6 @@ export default function About(){
     return(
         <div style={{backgroundImage:`url(${leavesFallingBG.src})`}} className="w-full flex items-center justify-evenly overflow-hidden realative">
             <div className="absolute right-10 top-10 flex gap-2">
-                <img src={chess.src} className=" h-16"  data-bs-toggle="popover" data-bs-content="And here's some amazing content. It's very engaging. Right?"/>
-                <img src={music.src} className=" h-16"/>
-                <img src={cricket.src} className=" h-16"/>
-                <button type="button" className="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
             </div>
             <div className="font-mono" style={{fontWeight:"400"}}>
                 <div className=" text-8xl text-green-900 text-center cursor-pointer" style={{fontFamily:"Fleur De Leah"}} onClick={handlePageSwitch}>
