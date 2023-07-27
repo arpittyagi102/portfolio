@@ -12,8 +12,8 @@ export default function Skills(){
         <div className={`w-full flex justify-evenly items-center flex-wrap ${value ? "flex-row-reverse" : ""}`} style={{backgroundImage:`url(${cloudsBg.src})`}}>
             <button onClick={() => setValue((item) => !item)}> CLick me</button>
             {
-                string.map((item)=>{
-                    return <Balloon value={item} />
+                string.map((item,key)=>{
+                    return <Balloon value={item} key={key}/>
                 })
             }
         </div>
@@ -23,7 +23,7 @@ export default function Skills(){
 function Balloon({value}){
     return(
         <motion.div className="w-40 h-40 bg-contain flex justify-center items-center bg-no-repeat m-10" style={{backgroundImage:`url(${hotAirBallon.src})`}} drag layout>
-            <div className='font-extrabold text-green-800 border p-2 border-green-800 rounded-full' style={{translate:'0 -30px'}}>
+            <div className='font-extrabold text-black p-2 rounded-full' style={{translate:'0 -20px'}}>
                 {value}
             </div>
         </motion.div>
