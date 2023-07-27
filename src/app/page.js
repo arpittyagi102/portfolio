@@ -1,8 +1,8 @@
 'use client'
 
 //import Welcome from "./components/Welcome";
-import Home from "./components/Home"
-import About from "./components/About";
+//import Home from "./components/Home"
+//import About from "./components/About";
 import Skills from "./components/Skills";
 import { motion,useScroll,useTransform } from "framer-motion";
 
