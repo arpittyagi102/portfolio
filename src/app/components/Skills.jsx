@@ -2,6 +2,7 @@ import react, { useState } from 'react';
 import cloudsBg from '../Assets/sky-clouds-bg.svg';
 import hotAirBallon from '../Assets/hot-air-balloon.svg';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Skills(){
 

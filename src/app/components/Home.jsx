@@ -4,6 +4,7 @@ import shapesBackground from "../Assets/shapes-background.svg";
 import shapesBackground2 from "../Assets/shapes-background2.svg";
 import Character from "../Assets/3dCharacter.png";
 import scrollDown from '../Assets/scrollDown.png';
+import Image from "next/image";
 
 export default function Home(){
 
@@ -13,8 +14,9 @@ export default function Home(){
 
             <nav className="flex justify-around p-5 text-xl items-center">
                 <div className="flex gap-9">
-                   {['Home','About','Project','Contact'].map((item) => {
+                   {['Home','About','Project','Contact'].map((item,key) => {
                         return <motion.div
+                            key={key}
                             whileHover={{rotate:'45deg'}}
                             transition={{ type: "spring", stiffness: 1000 }}
                         >
@@ -42,8 +44,8 @@ export default function Home(){
                 <div className="w-2/5" style={{width:"700px"}}>
                     <div className=" text-7xl">
                         Hello <br/>
-                        I am {ArpitTyagi.map((a) => {
-                            return <span className="hover:text-blue-500 hover:font-bold">{a}</span>
+                        I am {ArpitTyagi.map((a,k) => {
+                            return <span className="hover:text-blue-500 hover:font-bold" key={k}>{a}</span>
                         })}
                     </div>
                     <div className="text-2xl">
@@ -54,7 +56,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div className="inline-block">
-                    <img src={Character.src} className="w-2/5 inline-block" style={{width:"450px"}} />
+                    <Image src={Character.src} className="w-2/5 inline-block" style={{width:"450px"}} />
                 </div>
             </main>
             <footer className="flex">
