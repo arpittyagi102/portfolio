@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import leavesFallingBG from "../Assets/leaves-falling-bg.svg" 
+import Image from "next/image";
 import myPhoto from '../Assets/my-photo.png';
 import leaf from '../Assets/leaf.svg';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -43,7 +44,7 @@ export default function About(){
                         exit={{ opacity: 0, x:300, y:300 }}
                         transition={{ duration: 0.5,ease:'easeIn' }}
                     >
-                            This is my little cute corner of internet 🎉 Embrace the magic of web development with me, I always work in dark mode as light attracts bugs 🐛🪲 My love to understand new things and to create awesome things led me here. Join me on this adventure and let's craft extraordinary digital experiences together! 🚀🌟                    
+                            This is my little cute corner of internet 🎉 Embrace the magic of web development with me, I always work in dark mode as light attracts bugs 🐛🪲 My love to understand new things and to create awesome things led me here. Join me on this adventure and lets craft extraordinary digital experiences together! 🚀🌟                    
                         </motion.div>
                     ) : (
                     <motion.div
@@ -73,7 +74,7 @@ export default function About(){
                 </AnimatePresence>
                 </div>
             </div>
-            <img src={myPhoto.src}/>
+            <Image src={myPhoto.src} alt={'my src'}/>
         </div>
     )
 }

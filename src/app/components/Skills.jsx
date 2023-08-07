@@ -24,7 +24,7 @@ export default function Skills(){
 function Balloon({value}){
     return(
         <motion.div className="w-40 h-40 bg-contain flex justify-center items-center bg-no-repeat m-10" style={{backgroundImage:`url(${hotAirBallon.src})`}} drag layout>
-            <div className='font-extrabold text-black p-2 rounded-full' style={{translate:'0 -20px'}}>
+            <div className=' font-bold p-2 rounded-full' style={{translate:'0 -20px',color:'black'}}>
                 {value}
             </div>
         </motion.div>
