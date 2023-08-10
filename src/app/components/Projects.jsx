@@ -1,31 +1,17 @@
 import cloudsBg from '../Assets/sky-clouds-bg.svg';
-import helicopter from '../Assets/helicopter.svg';
-import desktop from '../Assets/desktop-cropped.svg'; 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Project from './Project';
 
 export default function Projects(){
+
+    const humaridukan={
+        title:'Humari Dukan',
+        summary:'Humari Dukaan is a fully functional ecommerce website built using React.js, Redux, React Router, Bootstrap, and Bootstrap Icons. The project aims to provide users with a seamless shopping experience and incorporates various features such as image carousel, scroll animations, search functionality, category-wise shopping, and a robust checkout system.',
+        link:'https://humaridukan.netlify.app/'
+    }
+
     return(
-        <div className={`w-full flex justify-evenly items-center `} style={{backgroundImage:`url(${cloudsBg.src})`}}>
-            <motion.div
-                initial={{ x: 500 }}
-                animate={{ x: 0 }}
-                transition={{
-                    ease:'linear', duration:5
-                }}  
-                style={{
-                    height:'500px'
-                }}
-            >
-                <div className='w-full flex justify-between'>
-                    <Image src={helicopter} alt='Helicopter' className=' '/>
-                    <Image src={helicopter} alt='Helicopter' className=' '/>
-                </div>
-                <div className='relative'>
-                    <Image src={desktop} alt='desktop' className='w-full relative'/>
-                    <iframe src='https://humaridukan.netlify.app' className='absolute' style={{top:'10%',left:'7%',width:'86%',height:'80%'}}/>
-                </div>
-            </motion.div>
+        <div className={`w-full flex justify-evenly items-center overflow-x-hidden`} style={{backgroundImage:`url(${cloudsBg.src})`}}>
+            <Project project={humaridukan}/>
         </div>
     )
 }
