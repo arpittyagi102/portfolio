@@ -17,11 +17,11 @@ export default function Projects(){
         },
     ]
 
-    const [currentProject, setCurrentProject] = useState(0);
+    
 
     return(
         <div className={`w-full flex justify-evenly items-center overflow-x-hidden`} style={{backgroundImage:`url(${cloudsBg.src})`}}>
-            <Project project={projectsData[currentProject]} setCurrentProject={setCurrentProject} />
+            <Project projectData={projectsData} />
         </div>
     )
 }
