@@ -6,6 +6,12 @@ import Image from 'next/image';
 
 export default function Project({ projectData }){
 
+    fetch('https://api.github.com/repos/arpittyagi102/LinkUp/stargazers')
+        .then(response => response.json())
+        .then(data => console.log(`Stars: ${data.stargazers_count}`))
+        .catch(error => console.error("Error:", error));
+
+
     const container = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
@@ -20,6 +26,7 @@ export default function Project({ projectData }){
     };
 
     const [pn, setpn] = useState(0);
+    const [stargazers, setStargazers] = useState(0)
 
     function changeProject(){
         if(pn+1 != projectData.length)
