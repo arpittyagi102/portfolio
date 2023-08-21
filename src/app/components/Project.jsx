@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import helicopter from '../Assets/helicopter.svg';
 import desktop from '../Assets/desktop-cropped.svg';
 import { motion } from 'framer-motion';
@@ -6,10 +6,20 @@ import Image from 'next/image';
 
 export default function Project({ projectData }){
 
-    fetch('https://api.github.com/repos/arpittyagi102/LinkUp/stargazers')
-        .then(response => response.json())
-        .then(data => console.log(`Stars: ${data.stargazers_count}`))
-        .catch(error => console.error("Error:", error));
+    useEffect(() => {
+        fetch('https://api.github.com/repos/arpittyagi102/LinkUp/stargazers')
+            .then(response => response.json())
+            .then(data => setStargazers(data.length))
+            .catch(error => console.error("Error:", error));
+    });
+
+    const [showLowerStats, setShowLowerStats] = useState(false);
+    
+    useEffect(()=>{
+        setTimeout(() => {
+            setShowLowerStats(true);
+        }, 10000);
+    })
 
 
     const container = {
@@ -26,7 +36,7 @@ export default function Project({ projectData }){
     };
 
     const [pn, setpn] = useState(0);
-    const [stargazers, setStargazers] = useState(0)
+    const [stargazers, setStargazers] = useState(0);
 
     function changeProject(){
         if(pn+1 != projectData.length)
@@ -44,6 +54,16 @@ export default function Project({ projectData }){
                     )}
                 )}              
             </p>
+            {showLowerStats &&
+                <motion.div className="flex">
+                    <h1 className="m-5 p-3 px-6 rounded-full bg-slate-900 flex text-lg font-bold">
+                        {stargazers} 
+                        <img height="20px" src="https://img.icons8.com/fluency/24/star.png" className="ms-2" alt="star"/></h1>
+                    <h1 className="m-5 p-3 px-6 rounded-full bg-slate-900">
+                        {stargazers}</h1>
+                </motion.div>
+            }
+            
         </motion.div>
         <motion.div 
             initial={{ x: 500 }} 
