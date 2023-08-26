@@ -23,7 +23,7 @@ export default function Project({ projectData }){
         setShowLowerStats(false);
         setTimeout(() => {
             setShowLowerStats(true);
-        }, 10000);
+        }, 8000);
     },[pn])
 
 
@@ -57,7 +57,7 @@ export default function Project({ projectData }){
                     )}
                 )}              
             </p>
-                <motion.div className={`flex ${!showLowerStats && 'hidden'}`}>
+                <motion.div className={`flex ${!showLowerStats && 'invisible'}`}>
                     <h1 className="m-5 p-3 px-6 rounded-full bg-slate-900 flex text-lg font-bold">
                         {stargazers} 
                         <img height="20px" src="https://img.icons8.com/fluency/24/star.png" className="ms-2" alt="star"/></h1>
